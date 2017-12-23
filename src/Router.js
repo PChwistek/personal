@@ -43,8 +43,8 @@ class Router extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <nav className="navbar">
+        <div className="main-container">
+          <nav className="navbar is-transparent">
             <Link to="/">
               <div className={this.state.activeIndex=== 0 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(0)}>ABOUT</div>
             </Link>
@@ -55,7 +55,7 @@ class Router extends Component {
               <div className={this.state.activeIndex=== 2 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(2)}>CONTACT</div>
             </Link>
           </nav>
-          <div className="container main">
+          <div className="container">
             {routes.map((route, index) => (
               <Route
                 key={index}
