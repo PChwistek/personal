@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import Work from './Work'
 import Contact from './Contact'
 import About from './About'
+
 import {
   BrowserRouter,
   Route,
@@ -11,23 +12,6 @@ import {
 } from 'react-router-dom'
 
 /*eslint-enable*/
-
-const routes = [
-  
-  { 
-    path: '/',
-    exact: true,
-    main: () => <About />
-  },
-  {
-    path: '/work',
-    main: () => <Work />,
-  },
-  {
-    path: '/contact',
-    main: () => <Contact />,
-  }
-];
 
 class Router extends Component {
 
@@ -39,11 +23,16 @@ class Router extends Component {
   }
 
   handleSelected = (index) => this.setState({ activeIndex : index})
+  containerSwitch = (index) => ({
+    0: 'about-container',
+    1: 'work-container',
+    2: 'contact-container'
+  })[index]
 
   render() {
     return (
       <BrowserRouter>
-        <div className="main-container">
+        <div className={this.containerSwitch(this.state.activeIndex)}>
           <nav className="navbar is-transparent">
             <Link to="/">
               <div className={this.state.activeIndex=== 0 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(0)}>ABOUT</div>
@@ -56,21 +45,15 @@ class Router extends Component {
             </Link>
           </nav>
           <div className="container">
-            {routes.map((route, index) => (
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                component={route.main}
-              />
-            ))}
+            <Route exact path="/" render={()=><About workLink={this.workLink} />}/>
+            <Route exact path="/work" render={()=><Work />}/>
+            <Route exact path="/contact" render={()=><Contact />}/>
           </div>
         </div>
       </BrowserRouter>
     );
   }
 }
-
 
 ReactDOM.render(<Router />, document.getElementById('root'));
 export default Router;

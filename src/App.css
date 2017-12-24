@@ -1,51 +1,98 @@
 
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+ @import url('https://fonts.googleapis.com/css?family=Teko');
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .navbar {
   display:flex;
   justify-content:center;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Teko', sans-serif;
   font-size:24px;
+  font-weight: bold;
   background-color: transparent !important;
+  font-color: #4a4a4a;
 }
 
 .active {
   text-decoration: underline;
 }
 
-.main-container{
-  background-color: #eef3f4;
+.about-container{
+  background-color: #eeeeee;
   height: 96vh;
   margin: 1%;
   overflow: hidden;
+}
+
+.work-container {
+  background-color: #fff;
+  height: 96vh;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.contact-container {
+  background-color: #eeeeee;
+  height: 96vh;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.greeting-container {
+  height: 100%;
+  display: flex;
+  padding: 15vh 10vw;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-title {
+  font-family: 'Teko', sans-serif;
+  font-size:4.8em;
+  line-height: 1.4em;
+  word-wrap: break-word;
+  letter-spacing: 2px !important;
+  font-weight: bold;
+}
+
+.greeting-subtitle {
+  padding-top: 5vh;
+}
+
+.is-about {
+  background-color: #FFDE02 !important;
+  border-color: transparent !important;
+  font-family: 'Teko', sans-serif;
+  font-size: 24px !important;
+  padding: 6px 60px !important;
+  margin: 5px auto !important;
+  font-size: 1.15em !important;
+  letter-spacing: 1px !important;
+}
+
+.highlighted{
+  background-color: #FFDE02;
+}
+
+a:link {
+    color: #4a4a4a;
+}
+
+/* visited link */
+a:visited {
+    color: #4a4a4a;
+}
+
+/* mouse over link */
+a:hover {
+    color: #4a4a4a;
+}
+
+/* selected link */
+a:active {
+    color: #4a4a4a;
 }
 
 html, body{
