@@ -23,6 +23,7 @@ class Router extends Component {
   }
 
   handleSelected = (index) => this.setState({ activeIndex : index})
+
   containerSwitch = (index) => ({
     0: 'about-container',
     1: 'work-container',
@@ -45,8 +46,8 @@ class Router extends Component {
             </Link>
           </nav>
           <div className="container">
-            <Route exact path="/" render={()=><About workLink={this.workLink} />}/>
-            <Route exact path="/work" render={()=><Work />}/>
+            <Route exact path="/" render={()=><About />}/>
+            <Route exact path="/work" render={()=><Work  activeIndex={this.state.activeIndex} handleSelected={this.handleSelected} />}/>
             <Route exact path="/contact" render={()=><Contact />}/>
           </div>
         </div>

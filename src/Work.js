@@ -9,8 +9,11 @@ class Work extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+    
     };
+    if(typeof this.props.activeIndex !== 'undefined'){
+      this.props.handleSelected(1);
+    }
   }
 
   render() {
