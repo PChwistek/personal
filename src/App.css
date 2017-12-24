@@ -43,14 +43,14 @@
 .greeting-container {
   height: 100%;
   display: flex;
-  padding: 10vh 10vw;
+  padding: 15vh 10vw;
   flex-direction: column;
   justify-content: center;
 }
 
 .greeting-title {
   font-family: 'Teko', sans-serif;
-  font-size:4.8em;
+  font-size:4.0em;
   line-height: 1.4em;
   word-wrap: break-word;
   letter-spacing: 2px !important;
