@@ -14,7 +14,7 @@ class About extends Component {
 
   render() {
     return (
-      <section className="greeting-container">
+      <section className="hero greeting-container">
         <h1 className="greeting-title"> 
           Hi! I'm Phil. 
           <br></br> I'm a student double-majoring 
