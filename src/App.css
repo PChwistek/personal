@@ -43,7 +43,7 @@
 .greeting-container {
   height: 100%;
   display: flex;
-  padding: 15vh 10vw;
+  padding: 10vh 10vw;
   flex-direction: column;
   justify-content: center;
 }
