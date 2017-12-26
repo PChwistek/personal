@@ -61,6 +61,34 @@
   padding-top: 5vh;
 }
 
+.work-tile {
+  font-family: 'Teko', sans-serif;
+  display: block !important;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.work-title {
+  font-color: #4a4a4a !important;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 2px !important;
+  display: inline;
+}
+
+.work-keyword {
+  font-color: #4a4a4a !important;
+  font-size: 1em;
+  background-color: #FFDE02;
+  padding-right: 3px;
+  padding-left: 3px;
+  letter-spacing: 1px !important;
+}
+
+.tiles {
+  padding-top: 10vh;
+}
+
 .is-about {
   background-color: #FFDE02 !important;
   border-color: transparent !important;
@@ -76,6 +104,10 @@
   background-color: #FFDE02;
 }
 
+.is-grey{
+  background-color: #eeeeee;
+}
+
 a:link {
     color: #4a4a4a;
 }
@@ -83,6 +115,10 @@ a:link {
 /* visited link */
 a:visited {
     color: #4a4a4a;
+}
+
+ul li{
+  display: inline;
 }
 
 /* mouse over link */
