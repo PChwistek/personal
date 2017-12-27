@@ -26,18 +26,18 @@
   overflow: hidden;
 }
 
-.work-container {
-  background-color: #fff;
-  height: 96vh;
-  margin: 1%;
-  overflow: hidden;
-}
-
 .contact-container {
   background-color: #eeeeee;
   height: 96vh;
   margin: 1%;
   overflow: hidden;
+}
+
+.work-container {
+  background-color: transparent;
+  height: 96vh;
+  margin: 1%;
+  overflow: visible;
 }
 
 .greeting-container {
@@ -61,11 +61,23 @@
   padding-top: 5vh;
 }
 
+.next-arrow {
+  pading-right: 20vh;
+}
+
+.work-icon {
+  padding-top: 3vh;
+}
+
+.no-link {
+  visibility: hidden;
+}
+
 .work-tile {
   font-family: 'Teko', sans-serif;
   display: block !important;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .work-title {
@@ -76,16 +88,51 @@
   display: inline;
 }
 
+.work-tile:hover  {
+  background-color: #FFDE02 !important;
+  font-color: #4a4a4a !important;
+}
+
+.work-tile:hover .work-keyword {
+  background-color: #fff !important;
+  font-color: #4a4a4a !important;
+}
+
+.work-active {
+  background-color: #FFDE02 !important;
+  font-color: #4a4a4a !important;
+  font-family: 'Teko', sans-serif;
+  display: block !important;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.work-active .work-keyword {
+  background-color: #fff !important;
+  font-color: #4a4a4a !important;
+  font-size: 1em;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: 5px;
+  letter-spacing: 1px !important;
+}
+
 .work-keyword {
   font-color: #4a4a4a !important;
   font-size: 1em;
   background-color: #FFDE02;
   padding-right: 3px;
   padding-left: 3px;
+  margin-right: 5px;
   letter-spacing: 1px !important;
 }
 
+
 .tiles {
+  padding-top: 5vh;
+}
+
+.cards {
   padding-top: 10vh;
 }
 
@@ -104,6 +151,14 @@
   background-color: #FFDE02;
 }
 
+
+.modal-next {
+  margin-right: 40vh;
+}
+
+.modal-back {
+  margin-left: 40vh;
+}
 .is-grey{
   background-color: #eeeeee;
 }

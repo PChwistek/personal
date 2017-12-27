@@ -18,8 +18,8 @@ class About extends Component {
         <h1 className="greeting-title"> 
           Hi! I'm Phil. 
           <br></br> I'm a student double-majoring 
-          <br></br> in <a href="http://news.psu.edu/story/435574/2016/11/07/administration/ist-scholarship-dinner-honors-students-donors" target="_blank">
-            <span className="highlighted">IST</span></a> and <a target="_blank" href="http://cals.la.psu.edu/news/alchemy-of-nostalgia-the-2017-marathon-read-1"><span className="highlighted">English.</span></a>
+          <br></br> in <a rel="noopener noreferrer" href="http://news.psu.edu/story/435574/2016/11/07/administration/ist-scholarship-dinner-honors-students-donors" target="_blank">
+            <span className="highlighted">IST</span></a> and <a target="_blank"  rel="noopener noreferrer"href="http://cals.la.psu.edu/news/alchemy-of-nostalgia-the-2017-marathon-read-1"><span className="highlighted">English.</span></a>
           <br></br> Feel free to check out <br></br> some of my <a href="http://localhost:3000/work"><span className="highlighted" >work.</span></a> 
         </h1>
         <div className="greeting-subtitle has-text-centered">
