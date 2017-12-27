@@ -79,6 +79,10 @@ class Work extends Component {
 
 /* eslint-disable */
 
+var ServiceDockText = "The purpose of this dashboard is to present customer feedback in a manageable way (specifically for retail franchises). Clicking on a graph category presents a list of free-form responses that were provided by that selected demographic.";
+var ClairvoyanceText ="I completed this side-project to learn more about Ethereum smart contracts and the Ethereum development stack.";
+var EquityHermitText ="A project in the making, I intend for this website to help visualize the fundamentals of publically-traded companies (balance sheets, market cap, etc.).";
+var PersonalText ="I created this website to present my body of work. You're on it right now!";
 
 const KeywordList = ({items}) => (
   <ul> 
@@ -90,7 +94,7 @@ const ServiceDock = () => (
   <div className="cards">
     <div className="columns">
       <div className="column is-4 is-offset-4">
-        <Card title={'ServiceDock 4'} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock5_thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock2.png', 
+        <Card title={'ServiceDock Dashboard'} text={ServiceDockText} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock5_thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock2.png', 
           'https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock3.png',
           'https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock4.png',
           'https://s3.us-east-2.amazonaws.com/chwistek-files/servicedock5.png']}/>
@@ -105,7 +109,7 @@ const Clairvoyance = () => (
   <div className="cards">
     <div className="columns">
       <div className="column is-4 is-offset-4">
-        <Card title={'clair'} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/c1._thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/c1.png', 
+        <Card title={'Clairvoyance'} text={ClairvoyanceText} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/c1._thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/c1.png', 
           'https://s3.us-east-2.amazonaws.com/chwistek-files/c2.png',
           'https://s3.us-east-2.amazonaws.com/chwistek-files/c3.png']}  />
       </div>
@@ -118,7 +122,7 @@ const EquityHermit = () => (
   <div className="cards">
     <div className="columns">
       <div className="column is-4 is-offset-4">
-        <Card title={'EquityHermit Wireframe'} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/equity_hermit.png'} 
+        <Card title={'EquityHermit Wireframe'} text={EquityHermitText} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/equity_hermit.png'} 
           imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/equity_hermit.png']}/>
       </div>
     </div>
@@ -130,7 +134,7 @@ const Personal = () => (
   <div className="cards">
     <div className="columns">
       <div className="column is-4 is-offset-4">
-        <Card title={'personal'} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/personal_thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/personal.png']}/>
+        <Card title={'Personal Portfolio'} text={PersonalText} image={'https://s3.us-east-2.amazonaws.com/chwistek-files/personal_thumbnail.png'} imageList={['https://s3.us-east-2.amazonaws.com/chwistek-files/personal.png']}/>
       </div>
     </div>
   </div>
@@ -180,9 +184,8 @@ class Card extends Component {
               <p className="title">{this.props.title}</p>
             </div>
           </div>
-          <div className="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris.
+          <div className="content has-text-left">
+            {this.props.text}
           </div>
           <a className="button" onClick={() => this.setState({modalActive: true})}> Launch Gallery </a>
         </div>

@@ -48,7 +48,7 @@ class Router extends Component {
           <div className="container">
             <Route exact path="/" render={()=><About />}/>
             <Route path="/work" render={()=><Work  activeIndex={this.state.activeIndex} handleSelected={this.handleSelected} />}/>
-            <Route exact path="/contact" render={()=><Contact />}/>
+            <Route exact path="/contact" render={()=><Contact activeIndex={this.state.activeIndex} handleSelected={this.handleSelected}/>}/>
           </div>
         </div>
       </BrowserRouter>

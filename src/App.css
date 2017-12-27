@@ -76,8 +76,8 @@
 .work-tile {
   font-family: 'Teko', sans-serif;
   display: block !important;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .work-title {
@@ -86,6 +86,26 @@
   font-size: 2em;
   letter-spacing: 2px !important;
   display: inline;
+}
+
+.contact-title {
+  font-color: #4a4a4a !important;
+  font-weight: bold;
+  font-size: 4.8em;
+  letter-spacing: 2px !important;
+  display: inline;
+}
+
+.contact-subtitle {
+  font-color: #4a4a4a !important;
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 2px !important;
+}
+
+.details-container {
+  padding-top: 25vh;
+  font-family: 'Teko', sans-serif;
 }
 
 .work-tile:hover  {
@@ -103,8 +123,8 @@
   font-color: #4a4a4a !important;
   font-family: 'Teko', sans-serif;
   display: block !important;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .work-active .work-keyword {
@@ -151,6 +171,9 @@
   background-color: #FFDE02;
 }
 
+.is-white {
+  background-color: #fff !important;
+}
 
 .modal-next {
   margin-right: 40vh;
