@@ -8,10 +8,11 @@ import About from './About'
 import {
   BrowserRouter,
   Route,
-  Link
+  Switch,
+  NavLink
 } from 'react-router-dom'
 
-/*eslint-enable*/
+/*eslint-disable*/
 
 class Router extends Component {
 
@@ -35,20 +36,23 @@ class Router extends Component {
       <BrowserRouter>
         <div className={this.containerSwitch(this.state.activeIndex)}>
           <nav className="navbar is-transparent">
-            <Link to="/">
-              <div className={this.state.activeIndex=== 0 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(0)}>ABOUT</div>
-            </Link>
-            <Link to="/work">
-              <div className={this.state.activeIndex=== 1 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(1)}>WORK</div>
-            </Link>
-            <Link to="/contact">
-              <div className={this.state.activeIndex=== 2 ? 'navbar-item active': 'navbar-item'} onClick={() => this.handleSelected(2)}>CONTACT</div>
-            </Link>
+            <NavLink exact to="/">
+              <div activeClassName='active' className='navbar-item' onClick={() => this.handleSelected(0)}>ABOUT</div>
+            </NavLink>
+            <NavLink to="/work">
+              <div activeClassName='active' className='navbar-item' onClick={() => this.handleSelected(1)}>WORK</div>
+            </NavLink>
+            <NavLink to="/contact">
+              <div activeClassName='active' className='navbar-item' onClick={() => this.handleSelected(2)}>CONTACT</div>
+            </NavLink>
           </nav>
           <div className="container">
+          <Switch>
             <Route exact path="/" render={()=><About />}/>
             <Route path="/work" render={()=><Work  activeIndex={this.state.activeIndex} handleSelected={this.handleSelected} />}/>
             <Route exact path="/contact" render={()=><Contact activeIndex={this.state.activeIndex} handleSelected={this.handleSelected}/>}/>
+            <Route render={() => {return (<p> Not found </p>)}} />
+          </Switch>
           </div>
         </div>
       </BrowserRouter>

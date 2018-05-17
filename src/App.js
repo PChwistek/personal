@@ -9,17 +9,9 @@ import 'bulma/css/bulma.css';
 /*eslint-enable*/
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
   render() {
     return (
-      <div className="App">
+      <div className='app'>
         <Router />
       </div>
     );
